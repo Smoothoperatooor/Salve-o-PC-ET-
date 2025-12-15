@@ -7,11 +7,18 @@ class Menu:
         self.fonteTexto = pygame.font.SysFont(None, 32)
 
         self.etImg = pygame.image.load("assets/etVitoria.png")
-        self.etImg = pygame.transform.scale(self.etImg, (220, 220))
+        self.etImg = pygame.transform.scale(self.etImg, (350, 220))
         self.etRect = self.etImg.get_rect(center=(self.largura // 2, 180))
+
+        self.etbImg = pygame.image.load("assets/buggou.png")
+        self.etbImg = pygame.transform.scale(self.etbImg, (380, 220))
+        self.etbRect = self.etbImg.get_rect(center=(self.largura // 2, 180))
+
 
     def gameOver(self, tela, pontuacao, motivo):
         tela.fill((20, 20, 20))
+
+        tela.blit(self.etbImg, self.etbRect)
 
         titulo = self.fonteTitulo.render("GAME OVER", True, (255, 60, 60))
         motivo_txt = self.fonteTexto.render(motivo, True, (255, 150, 150))
