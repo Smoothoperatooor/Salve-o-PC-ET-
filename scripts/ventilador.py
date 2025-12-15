@@ -10,7 +10,7 @@ class Ventilador:
         self.offset_x = 0
         self.offset_y = 0
     
-    def manipular_eventos(self, evento):
+    def manipularEventos(self, evento):
         if evento.type == pygame.MOUSEBUTTONDOWN:
             if self.rect.collidepoint(evento.pos):
                 self.arrastando = True
@@ -24,9 +24,6 @@ class Ventilador:
             self.rect.x = evento.pos[0] + self.offset_x
             self.rect.y = evento.pos[1] + self.offset_y
     
-    def atualizar(self):
-        # Pode adicionar lógica de atualização se necessário
-        pass
     
     def desenhar(self, tela):
         tela.blit(self.imagem, self.rect)
