@@ -9,7 +9,7 @@ class PC:
         self.rect = self.imagem.get_rect(topleft=(x, y))
 
         self.cooldown_overclock = 1200   
-        self.cooldown_undervolt = 1000   
+        self.cooldown_undervolt = 1200   
 
         self.ultimo_overclock = 0
         self.ultimo_undervolt = 0

@@ -12,7 +12,6 @@ tamanhoTela = (1200, 800)
 tela = pygame.display.set_mode(tamanhoTela)
 pygame.display.set_caption("Salve o PC, ET!")
 relogio = pygame.time.Clock()
-
 fundo = pygame.image.load("assets/fundo.png")
 fundo = pygame.transform.scale(fundo, tamanhoTela)
 
